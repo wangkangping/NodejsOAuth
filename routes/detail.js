@@ -24,7 +24,7 @@ router.get("/", function(req, res) {
             }
         });
     }).then(function(data) {
-        res.send('</br><img src="'+data.image.url+'" /><h3>Id: ' + data.id + '}</h3><h3>Hello ' +data.displayName +'</h3>');
+        res.send('</br><img src="'+data.image.url+'" /><h3>Id: ' + data.id + '</h3><h3>Hello ' +data.displayName +'</h3>');
     }).catch(function(err) {
         res.send('message get failed!');
     })

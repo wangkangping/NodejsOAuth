@@ -51,6 +51,13 @@ app.get("/oauthCallback", (req, res) => {
     	return
     }
 
+    if(session['tokens'] && session['tokens'].access_token) {
+
+        res.send('<h3>Login successful!</h3><a href="/details">Go to details page</a></br><a href="/mailSending">Send TEST Mail</a>');
+        
+        return;
+    }
+
     oauth2Client.getToken(code, (err, tokens) => {
         if (!err) {
             oauth2Client.setCredentials(tokens);

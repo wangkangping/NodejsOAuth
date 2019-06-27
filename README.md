@@ -218,7 +218,7 @@ module.exports = router;
 > 使用存储在session中的令牌，请求接口获取用户信息。页面如下：
 ![authorizeSuccess](document/detail.png) 
 
->start server using node: 
+start server using node: 
 DEBUG=express* node --inspect main.js
 参看链接：
 https://www.cnblogs.com/phen/p/9325353.html
